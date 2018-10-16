@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'LRPageRouteBuilder.dart' as LRPageRouteBuilder;
-import 'layouts/LayoutListPage.dart';
+import 'package:flutter_widget_summary/pages/LayoutListPage.dart';
 
-var data = const [
+var data = [
   "Layout",
+  "Anim",
+  "Input",
+  "Text",
+  "Image",
 ];
 
 class ListViewPage extends StatefulWidget {
@@ -23,13 +27,6 @@ class ListViewState extends State<ListViewPage> {
       itemBuilder: (context, index) {
         //ListTile封装了常用的列表item-ui和支持点击事件，样式大概就是简单通讯录列表的样式
         return new ListTile(
-          /// ---------------------------------------------------------------
-          /// --------------                                                |
-          /// |            |      title                                     |
-          /// |  leading   |                                        trailing|
-          /// |            |      subTitle                                  |
-          /// --------------                                                |
-          /// ---------------------------------------------------------------
             title: new Text(data[index]),
             onTap: () {
               switch (index) {
