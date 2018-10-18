@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'LRPageRouteBuilder.dart' as LRPageRouteBuilder;
+import 'layouts/ContainerPage.dart';
+
 class LayoutListPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,11 @@ class LayoutListPage extends StatelessWidget{
       ),
       body: ListView(
         children: <Widget>[
-          new GestureDetector(child: new ListTile(title: new Text("Container"),),onTap: (){},),
+          new GestureDetector(child: new ListTile(title: new Text("Container"),),onTap: (){
+            Navigator.of(context).push(LRPageRouteBuilder.createPageRouteBuilder(pageBuilder: (context,anim1,anim2){
+              return new ContainerPage();
+            }));
+          },),
 
         ],
       ),
