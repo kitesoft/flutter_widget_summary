@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'LRPageRouteBuilder.dart' as LRPageRouteBuilder;
 import 'layouts/AlignPage.dart';
+import 'layouts/AspectRatioPage.dart';
 import 'layouts/CenterPage.dart';
 import 'layouts/ContainerPage.dart';
 import 'layouts/FittedBoxPage.dart';
@@ -68,6 +69,16 @@ class LayoutListPage extends StatelessWidget {
                   LRPageRouteBuilder.createPageRouteBuilder(
                       pageBuilder: (context, anim1, anim2) {
                         return new FittedBoxPage();
+                      }));
+            },
+          ),
+          ListTile(
+            title: Text("AspectRatio"),
+            onTap: () {
+              Navigator.of(context).push(
+                  LRPageRouteBuilder.createPageRouteBuilder(
+                      pageBuilder: (context, anim1, anim2) {
+                        return new AspectRatioPage();
                       }));
             },
           )
