@@ -1,5 +1,6 @@
 class CenterDoc{
   ///这个Widget就是将子View居中显示，没有其他更多的元素可定制
+  ///是Align容器的子类
   ///constructor params:
   ///{
   /// child : 类型Widget，子View
