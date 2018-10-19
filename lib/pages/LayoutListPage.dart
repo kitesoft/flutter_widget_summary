@@ -4,6 +4,7 @@ import 'LRPageRouteBuilder.dart' as LRPageRouteBuilder;
 import 'layouts/AlignPage.dart';
 import 'layouts/AspectRatioPage.dart';
 import 'layouts/CenterPage.dart';
+import 'layouts/ConstrainedBoxPage.dart';
 import 'layouts/ContainerPage.dart';
 import 'layouts/FittedBoxPage.dart';
 import 'layouts/PaddingPage.dart';
@@ -79,6 +80,16 @@ class LayoutListPage extends StatelessWidget {
                   LRPageRouteBuilder.createPageRouteBuilder(
                       pageBuilder: (context, anim1, anim2) {
                         return new AspectRatioPage();
+                      }));
+            },
+          ),
+          ListTile(
+            title: Text("ConstrainedBox"),
+            onTap: () {
+              Navigator.of(context).push(
+                  LRPageRouteBuilder.createPageRouteBuilder(
+                      pageBuilder: (context, anim1, anim2) {
+                        return new ConstrainedBoxPage();
                       }));
             },
           )
