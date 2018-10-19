@@ -5,7 +5,7 @@ class AlignPage extends StatelessWidget{
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        title: Text("CenterPage"),
+        title: Text("AlignPage"),
         leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: () => Navigator.of(context).pop()),
       ),
       body: new Align(
