@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'LRPageRouteBuilder.dart' as LRPageRouteBuilder;
 import 'layouts/CenterPage.dart';
 import 'layouts/ContainerPage.dart';
+import 'layouts/PaddingPage.dart';
 
 class LayoutListPage extends StatelessWidget {
   @override
@@ -36,6 +37,16 @@ class LayoutListPage extends StatelessWidget {
                       pageBuilder: (context, anim1, anim2) {
                 return new CenterPage();
               }));
+            },
+          ),
+          ListTile(
+            title: Text("Padding"),
+            onTap: () {
+              Navigator.of(context).push(
+                  LRPageRouteBuilder.createPageRouteBuilder(
+                      pageBuilder: (context, anim1, anim2) {
+                        return new PaddingPage();
+                      }));
             },
           )
         ],
