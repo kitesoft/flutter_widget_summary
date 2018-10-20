@@ -9,6 +9,7 @@ import 'layouts/ConstrainedBoxPage.dart';
 import 'layouts/ContainerPage.dart';
 import 'layouts/FittedBoxPage.dart';
 import 'layouts/OffstagePage.dart';
+import 'layouts/OverflowBoxPage.dart';
 import 'layouts/PaddingPage.dart';
 
 class LayoutListPage extends StatelessWidget {
@@ -112,6 +113,16 @@ class LayoutListPage extends StatelessWidget {
                   LRPageRouteBuilder.createPageRouteBuilder(
                       pageBuilder: (context, anim1, anim2) {
                         return new OffstagePage();
+                      }));
+            },
+          ),
+          ListTile(
+            title: Text("OverflowBox"),
+            onTap: () {
+              Navigator.of(context).push(
+                  LRPageRouteBuilder.createPageRouteBuilder(
+                      pageBuilder: (context, anim1, anim2) {
+                        return new OverflowBoxPage();
                       }));
             },
           )
