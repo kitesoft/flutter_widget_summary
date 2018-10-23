@@ -11,6 +11,8 @@ import 'layouts/FittedBoxPage.dart';
 import 'layouts/OffstagePage.dart';
 import 'layouts/OverflowBoxPage.dart';
 import 'layouts/PaddingPage.dart';
+import 'layouts/RowPage.dart';
+import 'layouts/StackPage.dart';
 
 class LayoutListPage extends StatelessWidget {
   @override
@@ -123,6 +125,26 @@ class LayoutListPage extends StatelessWidget {
                   LRPageRouteBuilder.createPageRouteBuilder(
                       pageBuilder: (context, anim1, anim2) {
                         return new OverflowBoxPage();
+                      }));
+            },
+          ),
+          ListTile(
+            title: Text("Row"),
+            onTap: () {
+              Navigator.of(context).push(
+                  LRPageRouteBuilder.createPageRouteBuilder(
+                      pageBuilder: (context, anim1, anim2) {
+                        return new RowPage();
+                      }));
+            },
+          ),
+          ListTile(
+            title: Text("Stack"),
+            onTap: () {
+              Navigator.of(context).push(
+                  LRPageRouteBuilder.createPageRouteBuilder(
+                      pageBuilder: (context, anim1, anim2) {
+                        return new StackPage();
                       }));
             },
           )

@@ -16,7 +16,7 @@ class OffstageState extends State<OffstagePage>{
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        title: Text("AlignPage"),
+        title: Text("OffstageState"),
         leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: () => Navigator.of(context).pop()),
       ),
       body: Column(
